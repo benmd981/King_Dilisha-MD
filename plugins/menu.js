@@ -49,7 +49,7 @@ let madeMenu = `
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
     
 }catch(e){
-console.log(e)
+console.log(e),
 reply(`${e}`)
 }
 })
