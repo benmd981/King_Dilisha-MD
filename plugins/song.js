@@ -4,8 +4,8 @@ const yts = require('yt-search')
 
 
 cmd({
-    pattern: "audio",
-    desc: "download audio",
+    pattern: "song",
+    desc: "download song",
     category: "download",
     filename: __filename
 },
@@ -17,21 +17,19 @@ const data = search.videos[0];
 const url  = data.url
 
 let desc = ` 
-            DILISHA-MD WHATSAPP BOT
+  
+    ╭════ 🅼🆄🆂🅸🅲 ════─❃
+┃▢╭─────────────┈
+┃▢│ tittle: ${data.tittle}
+┃▢│ despcription: ${data.description} 
+┃▢│ time: ${data.time}
+┃▢| ago: ${data.ago}     
+┃▢│ views: ${data.views}
+┃▢│ like: ${data.like}
+┃▢╰─────────────┈
+╰══════════════════─❃
 
-      SRILANKA NO1 WHATSAPP MUSIC GROUP 🇱🇰 
-                HAPPY LIFE YOU 🥸
-____________________________________________
-⭕ tittle: ${data.tittle}
-⭕ despcription: ${data.description}
-⭕ time: ${data.time}
-⭕ ago: ${data.ago}
-⭕ views: ${data.views}
-____________________________________________
-
-        A RESPONCE BY FAMILY MUSIC
-                   POWER BY ⭕DILISHA⭕                    
-`
+ `
 
 
 await conn.sendMessage(from,{image:{url: data. thumbnail},caption:desc},{quoted:mek});
@@ -43,7 +41,7 @@ let downloadUrl = down.dl_url
 
 // send video + document message
 await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"MADE BY DILISHA"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"𝑨𝑼𝑫𝑰𝑶 🎵"},{quoted:mek})
 
 
 }catch(e){
