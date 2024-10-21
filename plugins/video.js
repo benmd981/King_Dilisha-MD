@@ -17,20 +17,16 @@ const data = search.videos[0];
 const url  = data.url
 
 let desc = ` 
-            DILISHA-MD WHATSAPP BOT
-
-      SRILANKA NO1 WHATSAPP MUSIC GROUP 🇱🇰 
-                HAPPY LIFE YOU 🥸
-____________________________________________
-⭕ tittle: ${data.tittle}
-⭕ despcription: ${data.description}
-⭕ time: ${data.time}
-⭕ ago: ${data.ago}
-⭕ views: ${data.views}
-____________________________________________
-
-        A RESPONCE BY FAMILY MUSIC
-                   POWER BY ⭕DILISHA⭕                    
+     ╭════ 🆅🅸🅳🅴🅾 ════─❃
+┃▢╭─────────────┈
+┃▢│ tittle: ${data.tittle}
+┃▢│ despcription: ${data.description} 
+┃▢│ time: ${data.time}
+┃▢| ago: ${data.ago}     
+┃▢│ views: ${data.views}
+┃▢│ like: ${data.like}
+┃▢╰─────────────┈
+╰══════════════════─❃                    
 `
 
 
@@ -43,7 +39,7 @@ let downloadUrl = down.dl_url
 
 // send video + document message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"MADE BY DILISHA"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"𝑽𝑰𝑫𝑬𝑶 🎬"},{quoted:mek})
 
 
 }catch(e){
