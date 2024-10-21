@@ -4,8 +4,8 @@ const yts = require('yt-search')
 
 
 cmd({
-    pattern: "song",
-    desc: "download songs",
+    pattern: "audio",
+    desc: "download audio",
     category: "download",
     filename: __filename
 },
@@ -17,8 +17,8 @@ const data = search.videos[0];
 const url  = data.url
 
 let desc = ` 
-              DILISHA-MD WHATSAPP BOT
-         
+            DILISHA-MD WHATSAPP BOT
+
       SRILANKA NO1 WHATSAPP MUSIC GROUP 🇱🇰 
                 HAPPY LIFE YOU 🥸
 ____________________________________________
@@ -30,20 +30,20 @@ ____________________________________________
 ____________________________________________
 
         A RESPONCE BY FAMILY MUSIC
-                   POWER BY ⭕DILISHA⭕
+                   POWER BY ⭕DILISHA⭕                    
 `
+
 
 await conn.sendMessage(from,{image:{url: data. thumbnail},caption:desc},{quoted:mek});
 
-//download audio
+//download video
 
 let down = await fg.yta(url)
 let downloadUrl = down.dl_url
 
-// send audio + document message
+// send video + document message
 await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
 await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"MADE BY DILISHA"},{quoted:mek})
-
 
 
 }catch(e){
